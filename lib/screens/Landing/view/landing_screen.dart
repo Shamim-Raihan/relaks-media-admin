@@ -27,7 +27,6 @@ class LandingScreen extends StatelessWidget {
               buildRightLayout(landingController)
             ],
           ),
-          tabletview: Container(),
           mobileview: Container()),
     );
   }

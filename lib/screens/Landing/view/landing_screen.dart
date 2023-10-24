@@ -27,7 +27,6 @@ class LandingScreen extends StatelessWidget {
               buildRightLayout(landingController)
             ],
           ),
-          tabletview: Container(),
           mobileview: Container()),
     );
   }
@@ -40,7 +39,10 @@ class LandingScreen extends StatelessWidget {
             height: 120.h,
             color: Colors.grey,
             child: Center(
-              child: Text('App bar', style: AppStyles().normalTextStyle,),
+              child: Text(
+                'App bar',
+                style: AppStyles().normalTextStyle,
+              ),
             ),
           ),
           Expanded(
@@ -73,10 +75,21 @@ class LandingScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
       width: 150.w,
-      color: Colors.red,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            Color.fromARGB(255, 96, 96, 96),
+            // Colors.grey,
+            Color.fromARGB(255, 23, 23, 23)
+          ],
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Image.asset('images/icon.jpeg'),
           InkWell(
             onTap: () {
               landingController.currentScreen.value = 1;
@@ -90,31 +103,46 @@ class LandingScreen extends StatelessWidget {
             onTap: () {
               landingController.currentScreen.value = 2;
             },
-            child:  Text('Access Insight',style: AppStyles().normalTextStyle,),
+            child: Text(
+              'Access Insight',
+              style: AppStyles().normalTextStyle,
+            ),
           ),
           InkWell(
             onTap: () {
               landingController.currentScreen.value = 3;
             },
-            child:  Text('Audio Content',style: AppStyles().normalTextStyle,),
+            child: Text(
+              'Audio Content',
+              style: AppStyles().normalTextStyle,
+            ),
           ),
           InkWell(
             onTap: () {
               landingController.currentScreen.value = 4;
             },
-            child:  Text('News',style: AppStyles().normalTextStyle,),
+            child: Text(
+              'News',
+              style: AppStyles().normalTextStyle,
+            ),
           ),
           InkWell(
             onTap: () {
               landingController.currentScreen.value = 5;
             },
-            child:  Text('Payment',style: AppStyles().normalTextStyle,),
+            child: Text(
+              'Payment',
+              style: AppStyles().normalTextStyle,
+            ),
           ),
           InkWell(
             onTap: () {
               landingController.currentScreen.value = 6;
             },
-            child:  Text('Other Services Managment',style: AppStyles().normalTextStyle,),
+            child: Text(
+              'Other Services Managment',
+              style: AppStyles().normalTextStyle,
+            ),
           ),
         ],
       ),

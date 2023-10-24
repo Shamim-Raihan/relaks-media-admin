@@ -34,6 +34,7 @@ dependencies:
   pubspec: ^2.3.0
   get:
   flutter_screenutil: ^5.9.0
+  country_flags: ^2.1.1
 
 dev_dependencies:
 

@@ -57,7 +57,7 @@ class LandingScreen extends StatelessWidget {
                 return const AudioContentScreen();
               }
               if (landingController.currentScreen.value == 4) {
-                return const NewsScreen();
+                return  NewsScreen();
               }
               if (landingController.currentScreen.value == 5) {
                 return const PaymentScreen();
